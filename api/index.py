@@ -1,5 +1,6 @@
 """
 Vercel API endpoint - Serverless deployment entry point
+Fixed: Removed vercel_app.py to prevent import conflicts
 """
 
 import os
