@@ -1,0 +1,10 @@
+# Ignore files that shouldn't be deployed to Vercel
+app.py
+demo_server.py
+test_*.py
+logs/
+venv/
+__pycache__/
+.pytest_cache/
+services/
+*.log
