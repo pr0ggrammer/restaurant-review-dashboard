@@ -174,6 +174,10 @@ def get_sentiment():
         }
     })
 
-# Vercel handler
-def handler(request):
-    return app(request.environ, lambda *args: None)
+# Vercel handler function
+def handler(event, context):
+    """Vercel serverless handler"""
+    return app
+
+# For Vercel compatibility
+app = app
