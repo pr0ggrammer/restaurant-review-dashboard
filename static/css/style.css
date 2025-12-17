@@ -8,22 +8,22 @@
 }
 
 :root {
-    /* Glass morphism color palette */
-    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    /* Blue theme color palette */
+    --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+    --secondary-gradient: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 50%, #67e8f9 100%);
+    --accent-gradient: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #60a5fa 100%);
     
-    /* Glass effect variables */
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-border: rgba(255, 255, 255, 0.2);
-    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    --glass-blur: blur(8px);
+    /* Glass effect variables - Enhanced for better visibility */
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --glass-shadow: 0 8px 32px 0 rgba(30, 58, 138, 0.4);
+    --glass-blur: blur(12px);
     
-    /* Typography */
+    /* Typography - Improved contrast */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --text-primary: rgba(255, 255, 255, 0.9);
-    --text-secondary: rgba(255, 255, 255, 0.7);
-    --text-muted: rgba(255, 255, 255, 0.5);
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.9);
+    --text-muted: rgba(255, 255, 255, 0.75);
     
     /* Spacing */
     --spacing-xs: 0.25rem;
@@ -74,7 +74,7 @@ body {
     width: 100%;
     height: 100%;
     background: var(--secondary-gradient);
-    opacity: 0.3;
+    opacity: 0.4;
     animation: gradientShift 8s ease-in-out infinite alternate;
 }
 
@@ -240,10 +240,10 @@ body {
 
 /* Glass Card Styles */
 .glass-card {
-    background: var(--glass-bg);
+    background: rgba(255, 255, 255, 0.18);
     backdrop-filter: var(--glass-blur);
     border-radius: var(--radius-lg);
-    border: 1px solid var(--glass-border);
+    border: 1px solid rgba(255, 255, 255, 0.35);
     box-shadow: var(--glass-shadow);
     padding: var(--spacing-lg);
     transition: all var(--transition-normal);
@@ -262,9 +262,9 @@ body {
 }
 
 .glass-card:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.25);
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(31, 38, 135, 0.5);
+    box-shadow: 0 12px 40px rgba(30, 58, 138, 0.6);
 }
 
 /* Card Header */
@@ -334,14 +334,14 @@ body {
 .metric-item {
     text-align: center;
     padding: var(--spacing-md);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.12);
     border-radius: var(--radius-md);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     transition: all var(--transition-fast);
 }
 
 .metric-item:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
 }
 
@@ -354,9 +354,10 @@ body {
 
 .metric-label {
     font-size: 0.875rem;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    font-weight: 500;
 }
 
 /* Chart Containers */
@@ -622,12 +623,90 @@ body {
     outline-offset: 2px;
 }
 
+/* Enhanced text shadows for better readability */
+.card-title,
+.metric-value,
+.dashboard-title {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.metric-label,
+.sentiment-label,
+.rating-label {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced glass effects */
+.glass-header {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-button {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.glass-select {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Theme tags with better visibility */
+.theme-tag {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.theme-tag:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Sentiment items with better contrast */
+.sentiment-item {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-sm);
+}
+
+.sentiment-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Rating bars with enhanced visibility */
+.bar-container {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bar-fill {
+    background: linear-gradient(90deg, #3b82f6, #60a5fa, #93c5fd);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 /* High contrast mode support */
 @media (prefers-contrast: high) {
     :root {
-        --glass-bg: rgba(255, 255, 255, 0.2);
-        --glass-border: rgba(255, 255, 255, 0.4);
+        --glass-bg: rgba(255, 255, 255, 0.3);
+        --glass-border: rgba(255, 255, 255, 0.5);
         --text-primary: #ffffff;
-        --text-secondary: rgba(255, 255, 255, 0.9);
+        --text-secondary: #ffffff;
+        --text-muted: rgba(255, 255, 255, 0.9);
+    }
+    
+    .glass-card {
+        background: rgba(255, 255, 255, 0.25);
+        border: 2px solid rgba(255, 255, 255, 0.5);
+    }
+    
+    .metric-item {
+        background: rgba(255, 255, 255, 0.2);
+        border: 2px solid rgba(255, 255, 255, 0.4);
     }
 }
