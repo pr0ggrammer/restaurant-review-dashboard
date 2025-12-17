@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "vercel_app.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "vercel_app.py"
+    }
+  ],
+  "env": {
+    "SERPAPI_KEY": "21fb6a53e8611b38fa10664a012d46729f86e7a31bdd6b54e15b99fa89ca0bc5",
+    "PLACE_ID": "central-park-boathouse-new-york-2"
+  }
+}

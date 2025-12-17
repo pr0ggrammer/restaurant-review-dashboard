@@ -1,0 +1,18 @@
+name: restaurant-review-dashboard
+services:
+- name: web
+  source_dir: /
+  github:
+    repo: your-username/restaurant-review-dashboard
+    branch: main
+  run_command: python app.py
+  environment_slug: python
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  envs:
+  - key: SERPAPI_KEY
+    scope: RUN_TIME
+    type: SECRET
+  - key: PLACE_ID
+    scope: RUN_TIME
+    value: central-park-boathouse-new-york-2
